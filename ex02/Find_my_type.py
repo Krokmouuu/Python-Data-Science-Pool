@@ -1,6 +1,7 @@
-def all_thing_is_obj(object: any) -> int:  # type(object) returns the type of the object
+# type(object) returns the type of the object
+def all_thing_is_obj(object: any) -> int:
     if (type(object) == str):
-        print(object + " is in the kitchen ", end = '')
+        print(object + " is in the kitchen ", end='')
         print(type(object))
     elif (type(object) == list):
         print('List :', type(object))
@@ -13,6 +14,3 @@ def all_thing_is_obj(object: any) -> int:  # type(object) returns the type of th
     else:
         print("Type not found")
     return 42
-
-    
-
