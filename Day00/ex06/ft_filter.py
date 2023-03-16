@@ -14,7 +14,7 @@ def main():
 
     names = ['Sammy', 'Ashley', 'Jo', 'Olly', 'Jackie', 'Charlie']
     names = ft_filter(lambda names: len(names) >= 5, names)  # My Function
-    # names = list(filter(lambda names: len(names) >= 5, names))  #RealFunction
+    # # names = list(filter(lambda names: len(names) >= 5, names))  #RealFunction
     print(names)
     return
 
