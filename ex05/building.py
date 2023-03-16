@@ -1,4 +1,4 @@
-import sys
+import sys as arg
 
 
 def print_final(upper: int, lower: int,
@@ -11,11 +11,12 @@ def print_final(upper: int, lower: int,
     print(space, "spaces")
     print(digit, "digits")
 
+
 def prompt_function() -> None:
     [upper := 0, lower := 0, digit := 0, ponct := 0, space := 0]
-    punct = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~\n\t\r\b\f'
+    punct = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~\n\t\r\b\f\0'
     print("What is the text to count?")
-    string = input()
+    string = arg.stdin.readline()
     for c in string:
         if (c.isupper() is True):
             upper += 1
@@ -38,14 +39,14 @@ def main():
     [upper := 0, lower := 0, digit := 0, ponct := 0, space := 0]
     punct = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~\n\t\r\b\f'
     try:
-        assert len(sys.argv) < 3, "more than one argument is provided"
-        if (sys.argv is None):
+        assert len(arg.argv) < 3, "more than one argument is provided"
+        if (arg.argv is None):
             return 0
-        if (len(sys.argv) == 1):
+        if (len(arg.argv) == 1):
             prompt_function()
             return 0
-        if (len(sys.argv) == 2):
-            for c in sys.argv[1]:
+        if (len(arg.argv) == 2):
+            for c in arg.argv[1]:
                 if (c.isupper() is True):
                     upper += 1
                 elif (c.islower() is True):
