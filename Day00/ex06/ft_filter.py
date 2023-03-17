@@ -1,7 +1,10 @@
 
 
 def ft_filter(func, object: any) -> any:
-    """Filter but with ft before so it's mine"""
+    """filter(function or None, iterable) --> filter object
+
+Return an iterator yielding those items of iterable for which function(item)
+is true. If function is None, return the items that are true."""
     newlist = [i for i in object if func(i) is True]
     return newlist
 

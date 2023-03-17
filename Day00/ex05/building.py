@@ -64,7 +64,7 @@ def main():
             total = upper + lower + digit + ponct + space
             print_final(upper, lower, digit, ponct, space, total)
     except AssertionError as msg:
-        print("AssertionError: ", msg)
+        print("AssertionError:", msg)
         return 1
     return 0
 

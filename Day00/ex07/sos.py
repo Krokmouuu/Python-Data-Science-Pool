@@ -51,6 +51,7 @@ def morse_translate(string: str):
             translated_text += DICTIONARY[letter.upper()] + ' '
         elif letter == ' ':
             translated_text += '/' + ' '
+    translated_text = translated_text[:-1]
     print(translated_text)
 
 

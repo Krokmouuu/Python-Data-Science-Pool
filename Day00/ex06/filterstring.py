@@ -3,7 +3,7 @@ import sys as arg
 
 def filterspring(string: str, n: int):
     """Filter the string and print the words with more than n characters"""
-    newlist = string.split()  # split the string into a list
+    newlist = [i for i in string.split() if string.split(' ')]
     newlist = list(filter(lambda string: len(string) > int(n), newlist))
     print(newlist)
     return
