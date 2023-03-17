@@ -16,8 +16,6 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """Apply a limit to the BMI"""
-    if (limit != int):
-        print("dd")
     newlist = numpy.array(bmi) > limit # Apply the limit
     newlist = newlist.tolist() # Convert the array to a list
     return newlist

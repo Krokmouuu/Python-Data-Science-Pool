@@ -14,6 +14,6 @@ def NULL_not_found(object: any) -> int:
     elif (type(object) == str and object == ""):
         print("Empty:", type(object))
         return 0
-    elif (type(object) == str):
+    else:
         print("Type not Found")
         return 1
