@@ -11,11 +11,13 @@ def main():
         for i in c:
             if (i in arg.argv[1][0:]):
                 if (len(arg.argv[1][1:]) > 1):
-                    assert arg.argv[1][1:].isdigit(), "argument is not an integer"
-                elif (i == "%"):
-                    assert arg.argv[1][0:].isdigit(), "argument is not an integer"
+                    f = arg.argv[1][1:].isdigit()
+                    assert f is True, "argument is not an integer"
+                elif (i == "%" or arg.argv[1][1:] == "%"):
+                    f = arg.argv[1][0:].isdigit()
+                    assert f is True, "argument is not an integer"
                 num = 0
-        if (num == None):
+        if (num is None):
             assert arg.argv[1].isdigit(), "argument is not an integer"
         num = int(arg.argv[1])
         if (num % 2 == 0):
