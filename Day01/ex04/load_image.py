@@ -16,8 +16,7 @@ def ft_load(path: str) -> np.array:
             raise AttributeError("The image is not a JPEG | JPG or PNG")
         print("The shape of image is: " + str(plt.imread(path).shape))
         arr = np.array(plt.imread(path))
-        plt.imshow(arr)
-        plt.show()
+        print(arr.flatten().astype(int))
     except AssertionError as e:
         print("AssertionError:", e)
         exit()
