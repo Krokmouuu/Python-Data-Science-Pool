@@ -15,6 +15,9 @@ def give_bmi(height: list[int | float],
     except AssertionError as msg:
         print("AssertionError:", msg)
         exit()
+    except TypeError as e:
+        print("TypeError:", e)
+        exit()
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
