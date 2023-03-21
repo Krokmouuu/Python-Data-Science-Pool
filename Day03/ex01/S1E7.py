@@ -36,7 +36,6 @@ class Lannister(Character):
         self.family_name = "Lannister"
         self.eyes = "blue"
         self.hairs = "light"
-        self.__str__()
 
     def __str__(self):
         return f"Vector {self.first_name, self.eyes, self.hairs}"
@@ -51,5 +50,6 @@ class Lannister(Character):
     @staticmethod
     def create_lannister(first_name, bool):
         """Lannister method create_lannister"""
+
         c = Lannister(first_name)
         return c

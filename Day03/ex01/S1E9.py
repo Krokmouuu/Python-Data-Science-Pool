@@ -15,11 +15,6 @@ class Character(ABC):
     def die(self):
         pass
 
-    @classmethod
-    def __str__(self):
-        return f"<bound method Baratheon.__str__ of Vector:  \
-        ({__class__.first_name, {__class__.eyes}, {__class__.hairs}})>"
-
 
 class Stark(Character):
     """Class Stark"""
