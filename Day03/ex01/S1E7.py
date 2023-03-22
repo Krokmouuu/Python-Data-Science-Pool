@@ -14,10 +14,10 @@ class Baratheon(Character):
         self.hairs = "dark"
 
     def __str__(self):
-        return f"Vector {self.first_name, self.eyes, self.hairs}"
+        return f"Vector {self.family_name, self.eyes, self.hairs}"
 
     def __repr__(self):
-        return f"Vector {self.first_name, self.eyes, self.hairs}"
+        return f"Vector {self.family_name, self.eyes, self.hairs}"
 
     def die(self):
         """Baratheon method die"""
